@@ -1,0 +1,72 @@
+<div class="login-page">
+  <div class="content">
+    <!-- <h1 class="app-name">Sb Admin Material</h1> -->
+    <form class="login-form" fxFlex (ngSubmit)="onSubmit(f)" #f="ngForm">
+      <div class="text-center">
+        <h2 class="app-name">Créer votre compte</h2>
+      </div>
+
+      <div fxFlex fxlayout="row" fxlayout.lt-md="column">
+        <div fxFlexFill>
+          <mat-radio-group>
+            <input matRadio type="radio" value="B" name="gender" />
+            <label>F.</label>
+            <input matRadio type="radio" value="A" name="gender" />
+            <label>M.</label>
+          </mat-radio-group>
+        </div>
+      </div>
+
+      <div fxFlex fxlayout="row" fxlayout.lt-md="column">
+        <div fxFlexFill>
+          <mat-form-field class="w-100">
+            <input matInput placeholder="Nom" name="name" ngModel required />
+          </mat-form-field>
+        </div>
+      </div>
+      <div fxFlex fxlayout="row" fxlayout.lt-md="column">
+        <div fxFlexFill>
+          <mat-form-field class="w-100">
+            <input matInput placeholder="Prenom" name="firstname" ngModel required />
+          </mat-form-field>
+        </div>
+      </div>
+      <div fxFlex fxlayout="row" fxlayout.lt-md="column">
+        <div fxFlexFill>
+          <mat-form-field class="w-100">
+            <input matInput placeholder="Email" name="email" ngModel required />
+          </mat-form-field>
+        </div>
+      </div>
+      <div fxFlex fxlayout="row" fxlayout.lt-md="column">
+        <div fxFlexFill>
+          <mat-form-field class="w-100">
+            <input matInput placeholder="Mot de passe" name="password" ngModel required />
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div fxFlex fxlayout="row" fxlayout.lt-md="column">
+        <div fxFlexFill>
+          <mat-form-field class="w-100">
+            <input matInput placeholder="Confirmez votre mot de passe " name="cpassword" ngModel required />
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div fxFlex fxLayout="col" fxLayoutGap="10px">
+        <div fxFlex fxLayout="row" fxLayout.lt-md="column">
+          <div fxFlexFill>
+            <button mat-raised-button color="primary" class="w-100" type="reset">Réinitialiser</button>
+          </div>
+        </div>
+
+        <div fxFlex fxLayout="row" fxLayout.lt-md="column">
+          <div fxFlexFill>
+            <button mat-raised-button color="primary" class="w-100" type="submit">Créer</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { HomeComponent } from './home.component';
+import { NavComponent } from './components/nav/nav.component';
+import { TopnavComponent } from './components/topnav/topnav.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { HomeRoutingModule } from './home-routing.module';
+import { TranslateModule } from '@ngx-translate/core';
+import {
+  MatButtonModule,
+  MatIconModule,
+  MatInputModule,
+  MatListModule,
+  MatMenuModule,
+  MatSidenavModule,
+  MatToolbarModule
+} from '@angular/material';
+@NgModule({
+  imports: [
+    CommonModule,
+    HomeRoutingModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatInputModule,
+    MatMenuModule,
+    MatListModule,
+    TranslateModule
+  ],
+  declarations: [HomeComponent, NavComponent, TopnavComponent, SidebarComponent]
+})
+export class HomeModule {}

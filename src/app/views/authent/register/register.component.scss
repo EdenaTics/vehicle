@@ -1,0 +1,5 @@
+@import '../auth.component.scss';
+
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 16px;
+}
