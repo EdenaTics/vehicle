@@ -9,9 +9,8 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path: 'home',
-    loadChildren: './views/home/home.module#HomeModule',
-    canActivate: [AuthGuard]
+    path: '',
+    loadChildren: './views/home/home.module#HomeModule'
   }
 ];
 

@@ -39,7 +39,7 @@ export class LocalStorageAppService {
 
   static setToken(token: Token): void {
     if (token == null) {
-      localStorage.removeItem(LocalStorageAppService.LOCAL_KEY_USER);
+      localStorage.removeItem(LocalStorageAppService.LOCAL_KEY_TOKEN);
     } else {
       localStorage.setItem(LocalStorageAppService.LOCAL_KEY_TOKEN, JSON.stringify(token));
     }

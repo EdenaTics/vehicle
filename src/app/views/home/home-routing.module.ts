@@ -5,7 +5,7 @@ import { HomeComponent } from './home.component';
 
 const routes: Routes = [
   {
-    path: 'home',
+    path: '',
     component: HomeComponent,
     children: [
       {
@@ -21,9 +21,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
   providers: [AuthGuard]
 })
-export class HomeRoutingModule { }
+export class HomeRoutingModule {}
 

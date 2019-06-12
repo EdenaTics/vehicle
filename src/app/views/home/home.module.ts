@@ -15,6 +15,7 @@ import {
   MatSidenavModule,
   MatToolbarModule
 } from '@angular/material';
+import { InterceptorProviders } from 'src/app/shared/interceptor/InterceptorProviders';
 @NgModule({
   imports: [
     CommonModule,
@@ -28,6 +29,7 @@ import {
     MatListModule,
     TranslateModule
   ],
+  providers: [InterceptorProviders],
   declarations: [HomeComponent, NavComponent, TopnavComponent, SidebarComponent]
 })
 export class HomeModule {}
