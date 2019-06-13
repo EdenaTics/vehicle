@@ -17,24 +17,24 @@ export class AuthentService implements IAuthent {
     const headers = new HttpHeaders()
       .set('Content-Type', 'application/x-www-form-urlencoded')
       .set('Authorization', `Basic ${Constants.AUTORIZATION_BASIC}`);
-      const httpParams = new HttpParams()
-        .set('grant_type', 'password')
-        .set('username', login)
-        .set('password', password)
-        .set('scope', Constants.SCOPE);
-      const options = { params: httpParams, headers: headers };
-    return this.http.post<Token>(`${Constants.URL_API}/oauth/token`, null, options );
+    const httpParams = new HttpParams()
+      .set('grant_type', 'password')
+      .set('username', login)
+      .set('password', password)
+      .set('scope', Constants.SCOPE);
+    const options = { params: httpParams, headers: headers };
+    return this.http.post<Token>(`${Constants.URL_API}/oauth/token`, null, options);
   }
 
   getCode(login: string, password: string): Observable<string> {
     const headers = new HttpHeaders()
       .set('Content-Type', 'application/x-www-form-urlencoded')
       .set('Authorization', `Basic ${Constants.AUTORIZATION_BASIC}`);
-     const httpParams = new HttpParams()
-       .set('response_type', 'code')
-       .append('client_id', Constants.API_KEY)
-       .append('scope', Constants.SCOPE);
-       const options = { params: httpParams};
+    const httpParams = new HttpParams()
+      .set('response_type', 'code')
+      .append('client_id', Constants.API_KEY)
+      .append('scope', Constants.SCOPE);
+    const options = { params: httpParams };
     return this.http.get<string>(`${Constants.URL_API}/oauth/authorize`, options);
   }
 
