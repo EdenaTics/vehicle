@@ -6,31 +6,28 @@ import { Observable } from 'rxjs';
 import { Constants } from 'src/app/commons/Constants';
 import { User } from 'src/app/models/User';
 import { LocalStorageAppService } from '../LocalStorageApp.service';
+import { BaseService } from '../BaseService';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AuthentService implements IAuthent {
-  constructor(private http: HttpClient) {}
+export class AuthentService  extends BaseService implements IAuthent {
+  constructor(private http: HttpClient) {
+    super();
+  }
 
   getToken(login: string, password: string): Observable<Token> {
-    const headers = new HttpHeaders()
-      .set('Content-Type', 'application/x-www-form-urlencoded')
-      .set('Authorization', `Basic ${Constants.AUTORIZATION_BASIC}`);
     const httpParams = new HttpParams()
       .set('grant_type', 'password')
       .set('username', login)
       .set('password', password)
       .set('scope', Constants.SCOPE);
-    const options = { params: httpParams, headers: headers };
+    const options = { params: httpParams, headers: this.headersBasic };
     return this.http.post<Token>(`${Constants.URL_API}/oauth/token`, null, options);
   }
 
   getCode(login: string, password: string): Observable<string> {
-    const headers = new HttpHeaders()
-      .set('Content-Type', 'application/x-www-form-urlencoded')
-      .set('Authorization', `Basic ${Constants.AUTORIZATION_BASIC}`);
-    const httpParams = new HttpParams()
+     const httpParams = new HttpParams()
       .set('response_type', 'code')
       .append('client_id', Constants.API_KEY)
       .append('scope', Constants.SCOPE);
