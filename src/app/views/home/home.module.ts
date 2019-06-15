@@ -22,6 +22,7 @@ import { InterceptorProviders } from 'src/app/shared/interceptor/InterceptorProv
 import { MyFleetsComponent } from './components/myfleets/myfleets.component';
 import { TablesRoutingModule } from 'src/app/layout/tables/tables-routing.module';
 import { TablesComponent } from 'src/app/layout/tables/tables.component';
+import { VehiclesComponent } from './components/vehicles/vehicles.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -40,6 +41,6 @@ import { TablesComponent } from 'src/app/layout/tables/tables.component';
     TranslateModule
   ],
   providers: [InterceptorProviders],
-  declarations: [HomeComponent, NavComponent, TopnavComponent, SidebarComponent, MyFleetsComponent, TablesComponent]
+  declarations: [HomeComponent, NavComponent, TopnavComponent, SidebarComponent, MyFleetsComponent, VehiclesComponent, TablesComponent]
 })
 export class HomeModule {}

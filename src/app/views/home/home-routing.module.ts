@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from '../../shared/guard/auth.guard';
 import { HomeComponent } from './home.component';
 import { MyFleetsComponent } from './components/myfleets/myfleets.component';
+import { VehiclesComponent } from './components/vehicles/vehicles.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,10 @@ const routes: Routes = [
       {
         path: 'myfleets',
         component: MyFleetsComponent
+      },
+      {
+        path: 'vehicles',
+        component: VehiclesComponent
       }
     ]
   }
