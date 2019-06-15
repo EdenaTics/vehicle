@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
       value => {
         this.authentService.setTokenStorage(value);
         console.log(value.access_token);
-        this.router.navigate(['']);
+        this.router.navigate(['/home']);
         this.ngxService.stop();
       },
       error => {

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from '../../shared/guard/auth.guard';
 import { HomeComponent } from './home.component';
+import { MyFleetsComponent } from './components/myfleets/myfleets.component';
 
 const routes: Routes = [
   {
@@ -15,6 +16,10 @@ const routes: Routes = [
       {
         path: 'dashboard',
         loadChildren: './dashboard/home-dashboard.module#HomeDashboardModule'
+      },
+      {
+        path: 'myfleets',
+        component: MyFleetsComponent
       }
     ]
   }

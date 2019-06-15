@@ -4,15 +4,18 @@ import { Observable } from 'rxjs';
 import { Fleet } from 'src/app/models/fleet/Fleet';
 import { Constants } from 'src/app/commons/Constants';
 import { HttpClient } from '@angular/common/http';
+import { BaseService } from '../BaseService';
 
 @Injectable({
   providedIn: 'root'
 })
-export class FleetsService implements IFleet {
+export class FleetsService extends BaseService implements IFleet {
 
-constructor(private http: HttpClient) { }
+constructor(private http: HttpClient) {
+  super();
+}
 
-getFleets(): Observable<Array<Fleet>> {
+getMyFleets(): Observable<Array<Fleet>> {
     return this.http.get<Array<Fleet>>(`${Constants.URL_API}/fleets/mine`);
 }
 

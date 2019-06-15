@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.fleetsService.getFleets().subscribe(
+    this.fleetsService.getMyFleets().subscribe(
       value => {
         console.log(value.shift());
       },

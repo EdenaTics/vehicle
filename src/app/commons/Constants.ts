@@ -2,9 +2,10 @@ export const Constants = {
          BASE_URL: 'https://api.xee.com',
          VERSION_API: 'v4',
          URL_API: 'https://api.xee.com/v4',
-         SCOPE:'vehicles.read vehicles.management vehicles.signals.read vehicles.locations.read vehicles.accelerometers.read vehicles.privacies.read vehicles.privacies.management vehicles.trips.read vehicles.loans.read vehicles.loans.management account.read vehicles.devices-data.read vehicles.events.read vehicles.gyroscopes.read fleets.read account.management',
+         APP_NAME: 'ALBATROS',
+         SCOPE: 'vehicles.read vehicles.management vehicles.signals.read vehicles.locations.read vehicles.accelerometers.read vehicles.privacies.read vehicles.privacies.management vehicles.trips.read vehicles.loans.read vehicles.loans.management account.read vehicles.devices-data.read vehicles.events.read vehicles.gyroscopes.read fleets.read account.management',
          MODE_TEST: true,
-         AUTORIZATION_BASIC:'OWUxMDI5ZGE3MzFlNmI0YzAwZGZlMjFhZDE1MDEyZTc6MjA4NDQ5MDBlMTlkNGJiYzNiMzg4NTY5ZDRmMzAyODk3MDhlZTgyYjFkZmY1ZTJhYmIzNzgzODBmYTY1MmRjMQ==',
+         AUTORIZATION_BASIC: 'OWUxMDI5ZGE3MzFlNmI0YzAwZGZlMjFhZDE1MDEyZTc6MjA4NDQ5MDBlMTlkNGJiYzNiMzg4NTY5ZDRmMzAyODk3MDhlZTgyYjFkZmY1ZTJhYmIzNzgzODBmYTY1MmRjMQ==',
          API_KEY: '9e1029da731e6b4c00dfe21ad15012e7'
        };
 /*

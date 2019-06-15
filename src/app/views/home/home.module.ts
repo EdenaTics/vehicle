@@ -13,9 +13,15 @@ import {
   MatListModule,
   MatMenuModule,
   MatSidenavModule,
-  MatToolbarModule
+  MatToolbarModule,
+  MatTableModule,
+  MatFormFieldModule,
+  MatPaginatorModule
 } from '@angular/material';
 import { InterceptorProviders } from 'src/app/shared/interceptor/InterceptorProviders';
+import { MyFleetsComponent } from './components/myfleets/myfleets.component';
+import { TablesRoutingModule } from 'src/app/layout/tables/tables-routing.module';
+import { TablesComponent } from 'src/app/layout/tables/tables.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -27,9 +33,13 @@ import { InterceptorProviders } from 'src/app/shared/interceptor/InterceptorProv
     MatInputModule,
     MatMenuModule,
     MatListModule,
+    TablesRoutingModule,
+    MatTableModule,
+    MatFormFieldModule,
+    MatPaginatorModule,
     TranslateModule
   ],
   providers: [InterceptorProviders],
-  declarations: [HomeComponent, NavComponent, TopnavComponent, SidebarComponent]
+  declarations: [HomeComponent, NavComponent, TopnavComponent, SidebarComponent, MyFleetsComponent, TablesComponent]
 })
 export class HomeModule {}
